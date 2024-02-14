@@ -37,9 +37,9 @@ public class AccountController {
 
 	@Autowired
 	AccountContactInfoDto accountContactInfoDto;
-
+/*
 	@Value("${build.version}")
-	private String buildVersion;
+	private String buildVersion;*/
 	public AccountController(IAccountsService iAccountsService){
 		this.iAccountsService=iAccountsService;
 	}
@@ -104,7 +104,7 @@ public class AccountController {
 
 		return ResponseEntity.
 				status(HttpStatus.OK).
-				body(buildVersion);
+				body("buildVersion");
 	}
 
 	@GetMapping("/java-version")
